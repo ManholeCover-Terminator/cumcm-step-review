@@ -1,6 +1,6 @@
 # cumcm-step-review ｜ 数学建模国赛 · 逐步审核版
 
-面向**全国大学生数学建模竞赛（CUMCM）**的完整建模论文分步审核工作流技能，兼容 Codex、Claude Code 等支持 [Agent Skills](https://agentskills.io) 规范的 Agent。
+面向全国大学生数学建模竞赛（CUMCM）的完整建模论文分步审核工作流技能，兼容 Codex、Claude Code 等支持 [Agent Skills](https://agentskills.io) 规范的 Agent。
 
 本仓库**本身就是技能**：`SKILL.md` 位于仓库根目录，克隆或复制整个文件夹到 Agent 的 skills 目录即可使用，无需额外安装步骤。
 
