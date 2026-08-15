@@ -1,0 +1,76 @@
+\documentclass[UTF8,12pt,a4paper]{ctexart}
+
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\newcommand{\keywords}[1]{\par\noindent\textbf{关键词：}#1}
+
+% ============================================================
+% 国赛官方格式要点（2026 年修订稿，以当届官网为准）：
+%   - 纸质版：第一页承诺书、第二页编号专用页、第三页摘要专用页
+%     （摘要含标题和关键词、无需翻译成英文，不超一页；页码从摘要页
+%     "1"开始、位于页脚中部）。
+%   - 正文从第四页开始：不要目录，不超过 30 页；正文后附录页数不限。
+%   - 附录必须含支撑材料文件列表 + 全部完整可运行源程序；
+%     确实没有用到程序须注明"本论文没有用到程序"。
+%   - 电子版：第一页必须是摘要专用页（不要承诺书/编号页），
+%     PDF/Word 单文件 ≤20MB、不压缩；全文不得出现身份/学校/赛区信息。
+%   - 当届官方模板发布后必须优先使用并核验；本文件只是构建基线，
+%     不替代官方文件。
+% ============================================================
+
+\title{LATEX_TEMPLATE_TITLE}
+\author{}
+\date{}
+
+\begin{document}
+
+% 纸质版需在摘要页之前插入官方承诺书页与编号专用页（本基线不含）。
+% 电子版第一页即本页（摘要专用页），页码从 1 开始。
+\begin{abstract}
+LATEX_TEMPLATE_ABSTRACT
+\keywords{LATEX_TEMPLATE_KEYWORDS}
+\end{abstract}
+
+\section{问题重述}
+LATEX_TEMPLATE_BODY
+
+\section{问题分析}
+LATEX_TEMPLATE_BODY
+
+\section{模型假设与符号说明}
+LATEX_TEMPLATE_BODY
+
+\section{数据预处理}
+LATEX_TEMPLATE_BODY
+
+% 逐问建模与求解：按题目子问题数量展开，每问一节；子问题只有两个时删除多余小节。
+% 每问包含：建模思路 → 数学表达 → 求解方法 → 结果 → 图表 + 紧随其后的分析。
+\section{问题一建模与求解}
+LATEX_TEMPLATE_BODY
+
+\section{问题二建模与求解}
+LATEX_TEMPLATE_BODY
+
+\section{问题三建模与求解}
+LATEX_TEMPLATE_BODY
+
+\section{模型的分析与检验}
+LATEX_TEMPLATE_BODY
+
+\section{模型的评价与推广}
+LATEX_TEMPLATE_BODY
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+\appendix
+\section{附录}
+% 附录：支撑材料文件列表 + 全部完整可运行源程序。
+% 没有用到程序时在此注明"本论文没有用到程序"。
+LATEX_TEMPLATE_BODY
+
+\end{document}

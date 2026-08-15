@@ -1,0 +1,4 @@
+interface:
+  display_name: "数学建模国赛-逐步审核版"
+  short_description: "国赛建模分步审核：先审思路再写码，逐部分写入论文草稿"
+  default_prompt: "使用 $cumcm-step-review 帮我做国赛题，逐步推进，每部分先审核思路和算法，再写代码并写入论文草稿。"

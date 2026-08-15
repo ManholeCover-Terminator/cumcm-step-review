@@ -1,0 +1,1246 @@
+{
+ "package": "cumcm-step-review",
+ "version": "1.6",
+ "files": [
+  {
+   "path": "SKILL.md",
+   "sha256": "57e2597fe191ca31bac9ec9a26da4277a553e2582afab00e2bcc73e54f2fa2c6",
+   "bytes": 13893
+  },
+  {
+   "path": "agents\\openai.yaml",
+   "sha256": "9a41a7592c843f04ae72dc63aac3a665aece67fa11ed419b7ae24fc6424db8b4",
+   "bytes": 321
+  },
+  {
+   "path": "assets\\01-优化算法说明.md",
+   "sha256": "d955d0b64858f6fbcc1548c186dfef2e4292178a1fdfafddc23326e70f24b9bd",
+   "bytes": 77921
+  },
+  {
+   "path": "assets\\02-预测类算法说明.md",
+   "sha256": "4997efc971cee7bb174ce75f883bc733c9c7073bf9e29c25f33580f502f8823c",
+   "bytes": 68710
+  },
+  {
+   "path": "assets\\03-评价类算法说明.md",
+   "sha256": "87c5b17077bdd6fc5fcd4213ac4df57b738d75315879f5f878379020fe1dfaba",
+   "bytes": 79170
+  },
+  {
+   "path": "assets\\04-图论与网络分析算法说明.md",
+   "sha256": "97cb0f21a6a4d5694f57f55ba8993b489a17a3db5711fb650a3d8b3fec0b96e8",
+   "bytes": 35076
+  },
+  {
+   "path": "assets\\05-统计分析与数据处理算法说明.md",
+   "sha256": "998d23617d69f35e3235fb6849bbde5508d4ab41ed7a461c25a4d75ec193b742",
+   "bytes": 62167
+  },
+  {
+   "path": "assets\\06-综合类算法说明.md",
+   "sha256": "2c53be133b991d5bf19915c973bf4a8290c91fc3ab82f9fa5ed680b0ed7188db",
+   "bytes": 35327
+  },
+  {
+   "path": "assets\\07-机器学习算法说明.md",
+   "sha256": "b12382c0424fcd24799063848518d41bd26f308920f156d5e0cc013a3bac38df",
+   "bytes": 23038
+  },
+  {
+   "path": "assets\\README.md",
+   "sha256": "8e4d1d07f5fbfba58bd50aebb19b5b4adc7b68e6704a727fae1326a1b6cca176",
+   "bytes": 9381
+  },
+  {
+   "path": "assets\\期刊配色方案.md",
+   "sha256": "726135b9d327ad92485bd8606610fd6d3737c44dfaf1c14c88e9deeff69bdc13",
+   "bytes": 4064
+  },
+  {
+   "path": "assets\\figure-templates\\README.md",
+   "sha256": "ee5422de5618ddcedab69c0d8bfa1574ba4de7923f02138ddfe865365ca68666",
+   "bytes": 949
+  },
+  {
+   "path": "assets\\figure-templates\\references\\figure-catalog.md",
+   "sha256": "016222ab0c336b6816e33f8c20fa80c675e151be6778b25878a820b29a45e665",
+   "bytes": 1432
+  },
+  {
+   "path": "assets\\figure-templates\\references\\plot-recipes.md",
+   "sha256": "e6deeb4e295f35f47175e3fe9da34f305dd56508be3ca9f5cf1f9e68a4c3db1c",
+   "bytes": 1395
+  },
+  {
+   "path": "assets\\figure-templates\\scripts\\render_template.py",
+   "sha256": "671281e7d0cb1e25fd96867c5d1323da4f8949a590f51dae2eacaa3bed81f970",
+   "bytes": 5667
+  },
+  {
+   "path": "assets\\figure-templates\\scripts\\templates\\make_correlation_pairgrid.py",
+   "sha256": "e923aef5946d94c7931710415b1381c593b2d0ea3e4088d19161bac843bdb767",
+   "bytes": 7093
+  },
+  {
+   "path": "assets\\figure-templates\\scripts\\templates\\make_cv_roc_ci.py",
+   "sha256": "dcdfefa323e70303f17084b5cdd9eb6f2de452041a120b753fdb302aa80b5a00",
+   "bytes": 7991
+  },
+  {
+   "path": "assets\\figure-templates\\scripts\\templates\\make_grouped_circular_heatmap.py",
+   "sha256": "73a0e33ebc6b74f9d8ec34ddb3e170010946cb6a686d56f39c6830b7956de538",
+   "bytes": 10215
+  },
+  {
+   "path": "assets\\figure-templates\\scripts\\templates\\make_grouped_corr_split_violin.py",
+   "sha256": "6ff0dd502ad2f5d3a28ee1d07e2e75d3dbc46c285a95ed46ca7eb0f6f9456b30",
+   "bytes": 10081
+  },
+  {
+   "path": "assets\\figure-templates\\scripts\\templates\\make_multiclass_shap_combo.py",
+   "sha256": "0fe4ecdd2b9399b3e8f4f11accdfa0b4c34713288c9574a17d068ea76462f441",
+   "bytes": 10046
+  },
+  {
+   "path": "assets\\figure-templates\\scripts\\templates\\make_nature_chord_diagram.py",
+   "sha256": "8e76d3453e410296840cd292fe938b34aaf3d146e12e2c84e0171312009d605d",
+   "bytes": 10163
+  },
+  {
+   "path": "assets\\figure-templates\\scripts\\templates\\make_paired_raincloud.py",
+   "sha256": "32e8faeb0fd9d1455e2d557e45f8d3c7b7b5c326601767a569b7a1eb2621efb4",
+   "bytes": 10579
+  },
+  {
+   "path": "assets\\figure-templates\\scripts\\templates\\make_prediction_marginal_grid.py",
+   "sha256": "94d99602398979e5e7aeb5c8e8b22d4eb5323acf511e069c4dd2f9008422b14e",
+   "bytes": 8556
+  },
+  {
+   "path": "assets\\figure-templates\\scripts\\templates\\make_rf_tpe_surface.py",
+   "sha256": "d4a34402de4f23951a01476ef9b1096cc22ee9e1fc01dd7a9b9b1e580dfca65b",
+   "bytes": 6146
+  },
+  {
+   "path": "assets\\figure-templates\\scripts\\templates\\make_taylor_diagram.py",
+   "sha256": "104fa0c53dc4d908a521cce5400de6b90cd0d1587b4364f6d1c1b07becd6ddc3",
+   "bytes": 7582
+  },
+  {
+   "path": "assets\\figure-templates\\scripts\\templates\\make_urban_park_cooling_combo.py",
+   "sha256": "f486f4ec4eb6baab6723ecde0f5bc8818396c17648621bda6e0c2b68abc8b6ba",
+   "bytes": 15897
+  },
+  {
+   "path": "assets\\templates\\main.tex",
+   "sha256": "a0a673f3d093b23fef2786e1b0dbecffeb36c6a252640d51deb05a7aca6c9d09",
+   "bytes": 2582
+  },
+  {
+   "path": "assets\\templates\\README.md",
+   "sha256": "635a6cceb98ec01d41bedd9fccebad013278c1cda16e0cabdd85654bd247acab",
+   "bytes": 2722
+  },
+  {
+   "path": "assets\\templates\\references.bib",
+   "sha256": "c85fa9f8c7cdb3b0c8c2f394bebd7624f6ff5abdd6bac5b4f43b58e67ee7c222",
+   "bytes": 66
+  },
+  {
+   "path": "assets\\templates\\论文模板.docx",
+   "sha256": "ee4dcf49856eb40bfde404dbd0061ce16891b2d6fe4cbb542ca9925d25c61489",
+   "bytes": 38800
+  },
+  {
+   "path": "references\\math_modeling_norms.md",
+   "sha256": "95a36b97fb089a27c9c442996ef32b122a4e34de1f310f140491192946342e8c",
+   "bytes": 31043
+  },
+  {
+   "path": "references\\README.md",
+   "sha256": "69deb17338dfdc680646cb7deb17500c184d8291a0f8b20114e6226fefa1f8e3",
+   "bytes": 3206
+  },
+  {
+   "path": "references\\Subagent调度.md",
+   "sha256": "e3b0a1b1591e22e296c8b560ec03b1dcf1155975c5ab6298c76e2cd9a2f939a6",
+   "bytes": 7896
+  },
+  {
+   "path": "references\\优秀论文写法指南.md",
+   "sha256": "024b639d90c923906eeef4e131769500af63165943c0cc0f6905bf0d6d68b00b",
+   "bytes": 11273
+  },
+  {
+   "path": "references\\优秀论文语料分析报告.md",
+   "sha256": "b2f8e5d2ede519de3ef0b84f00d15071265d497b4459f3ea8ce60c33467a99bd",
+   "bytes": 12781
+  },
+  {
+   "path": "references\\写作与图表规范.md",
+   "sha256": "0db7791d7a3046d3bbe4e6171bb861395e1ee83a86637168399bce2157cae63f",
+   "bytes": 6929
+  },
+  {
+   "path": "references\\国赛规范.md",
+   "sha256": "488aac82504407579d496e994b1a79b6e5ee2116ddf5f009b79571869d838216",
+   "bytes": 10120
+  },
+  {
+   "path": "references\\模型选型树.md",
+   "sha256": "4ea6ccc92200af5ec8a8ce5d1ed630af2cded1ed3f199d91f2d5fe49282fedc2",
+   "bytes": 4482
+  },
+  {
+   "path": "references\\算法索引.md",
+   "sha256": "9f41ee36b41ac80702ae208b233a5bc814e28230f7d77d33cfdbdec8ca860605",
+   "bytes": 1021
+  },
+  {
+   "path": "references\\质检清单.md",
+   "sha256": "37614514c765cd9354d41c1a7bca6428b5a951e712efccb20aa190a23a260a63",
+   "bytes": 6489
+  },
+  {
+   "path": "references\\阶段流程.md",
+   "sha256": "ae3d50356bec299aaa66fe4785a75116c440c57775dd4269173d50f76f4c9242",
+   "bytes": 14667
+  },
+  {
+   "path": "references\\roles\\建模手\\前置合同.md",
+   "sha256": "cf2cee0a85b9ed36115dbb29033e636720c838a7f16bdec8fd34a345365ecb43",
+   "bytes": 947
+  },
+  {
+   "path": "references\\roles\\建模手\\工作流程.md",
+   "sha256": "7830734c2006e39dac3d010234eeee44e63cf415bbf0c68be9643f1a69272907",
+   "bytes": 3471
+  },
+  {
+   "path": "references\\roles\\建模手\\常见模式.md",
+   "sha256": "202a0143140499784c673607a125ed2a77717950b7aee511177988830e914277",
+   "bytes": 6077
+  },
+  {
+   "path": "references\\roles\\建模手\\建模设计理论.md",
+   "sha256": "fcae04f30ba8df0fca97005f866aee915621d853727426ef58baee2194d794e3",
+   "bytes": 2677
+  },
+  {
+   "path": "references\\roles\\建模手\\质检清单.md",
+   "sha256": "bc565c0a0888ba4c554c5ccda36daa877db39e507e8261de48cf6525fb9ebcc3",
+   "bytes": 1398
+  },
+  {
+   "path": "references\\roles\\编程手\\MATLAB规范.md",
+   "sha256": "714328ebbbb2f229dc1d86b85e7256069ed56cc7e07705b4f264c9c6c59b423e",
+   "bytes": 3777
+  },
+  {
+   "path": "references\\roles\\编程手\\可视化规范.md",
+   "sha256": "8fcf8dc4111d6f41426e37e7613cfa50be91ec9483f3546afc5dd34c6be144ff",
+   "bytes": 14382
+  },
+  {
+   "path": "references\\roles\\编程手\\可视化面板模板.html",
+   "sha256": "035b0b43af846eb951447a88255d9e0812e522c58b98fdbd642e9b75d81dcf69",
+   "bytes": 18105
+  },
+  {
+   "path": "references\\roles\\编程手\\图表选择与避坑.md",
+   "sha256": "b6396120127b61b44dded43638df93ddd3f271dc597117ed38db1a7e81c0fa9c",
+   "bytes": 12019
+  },
+  {
+   "path": "references\\roles\\编程手\\工作流程.md",
+   "sha256": "1568d2b3900e58a8b015c123d8e2cc6cca716ea9a822f640ad5563286ef64cae",
+   "bytes": 6867
+  },
+  {
+   "path": "references\\roles\\编程手\\常见模式.md",
+   "sha256": "47a724081415f5adcaf2a31aeaf55f806b725e7d288b0c1daddacbc7f2b510d9",
+   "bytes": 17809
+  },
+  {
+   "path": "references\\roles\\编程手\\数据剖析解读.md",
+   "sha256": "f18d9ebd21c47e7da31983110063c228ccaba1e2ee4eb3f702b978bd70cee740",
+   "bytes": 7149
+  },
+  {
+   "path": "references\\roles\\编程手\\期刊规范.md",
+   "sha256": "30321e22c14b1db4160e6a861216ac1a0d78cb73213b63f0afeb057e4fb792fe",
+   "bytes": 6590
+  },
+  {
+   "path": "references\\roles\\编程手\\视觉回审.md",
+   "sha256": "19bc15ffc761c54434051de3e4dca91ac322b948623424193e960b7ee49c1889",
+   "bytes": 6353
+  },
+  {
+   "path": "references\\roles\\编程手\\质检清单.md",
+   "sha256": "bb341ca15aba3baa70c7bf18e72eb0e4afa03e37200ac9273f805b63a8714c00",
+   "bytes": 5277
+  },
+  {
+   "path": "references\\roles\\论文手\\LaTeX格式规范.md",
+   "sha256": "4fdcdf09b9c2a9eca1f6a9f0237df43921f96c2d99cc811bd16c5b3f8416cb1e",
+   "bytes": 3944
+  },
+  {
+   "path": "references\\roles\\论文手\\写作规范.md",
+   "sha256": "649042bd71ceddb4114c3a1745225c52c2fca4d1324330f2ba2b522f92506a36",
+   "bytes": 586
+  },
+  {
+   "path": "references\\roles\\论文手\\工作流程.md",
+   "sha256": "505d29829390b56bddcf68698c491e3f15dbc024ddcb1ab56b88d3dffc70d40d",
+   "bytes": 7384
+  },
+  {
+   "path": "references\\roles\\论文手\\章节模板.md",
+   "sha256": "796de56ef7699016fa6b42ad1d82ce93d92234cb59ac078392b61a3e86459777",
+   "bytes": 6525
+  },
+  {
+   "path": "references\\roles\\论文手\\自审框架.md",
+   "sha256": "f6d1226b3466da81b7d6e697ba5bb318066b32fa04d05c38325611115313c8ac",
+   "bytes": 4572
+  },
+  {
+   "path": "references\\roles\\论文手\\英文化工作流.md",
+   "sha256": "a4f19da4523235e5c34d5316c49c3ecaa2607c7307af93d4d0ed78d9652476f4",
+   "bytes": 5404
+  },
+  {
+   "path": "references\\roles\\论文手\\论文格式规范.md",
+   "sha256": "b44cfc1a0608e9dcd90f1ad5c1856c1c34f79f1999aed85a1e0b95642a1514a2",
+   "bytes": 4813
+  },
+  {
+   "path": "references\\roles\\论文手\\论文模板.docx",
+   "sha256": "cdffc55765df1ae4e3dea6882b9088f4cc59c39f94e9808e7b83aa06fec29dd0",
+   "bytes": 15082
+  },
+  {
+   "path": "references\\摘要写作\\analysis.md",
+   "sha256": "5f8e6978fb8029b1f5a409d3ecfc93e45a3e672453b0b6feef51191e9382025f",
+   "bytes": 25312
+  },
+  {
+   "path": "references\\摘要写作\\checklist.md",
+   "sha256": "a9e296845b2bad00361261605b42ee12eaf9d1940edb8600c3035759eca92f54",
+   "bytes": 8743
+  },
+  {
+   "path": "references\\摘要写作\\example.md",
+   "sha256": "cfadac410ef3fbe6ceea2537e9d2c98ceeaa81492a02adb13529ee6b5ad93403",
+   "bytes": 85050
+  },
+  {
+   "path": "references\\摘要写作\\mistakes.md",
+   "sha256": "29dd8da26e17f939eb5d1b7a04d79a844e8d7e5743ec81adf61161ca73b206c9",
+   "bytes": 15801
+  },
+  {
+   "path": "references\\摘要写作\\templates.md",
+   "sha256": "c7422dff9d31b0bdda02ac209af07d34e1c900facdde0aa27c50346845e27f30",
+   "bytes": 19320
+  },
+  {
+   "path": "references\\摘要写作\\摘要写作方法论.md",
+   "sha256": "cd005f3850e7eb52264880ae7a63602bbe599cd5e93f9965b487bf073cbc1d77",
+   "bytes": 16584
+  },
+  {
+   "path": "references\\摘要写作\\摘要汇总.docx",
+   "sha256": "fae956d5ed2917003247bfce49a30a612598ea896f570f89aaf184ec5f491653",
+   "bytes": 152949
+  },
+  {
+   "path": "references\\摘要写作\\摘要汇总.md",
+   "sha256": "eef7e6099441cf149ebe40c4253d03dd5b951e2214552b1303e4ae14d195a80f",
+   "bytes": 289701
+  },
+  {
+   "path": "references\\绘图参考\\chart_knowledge_base.md",
+   "sha256": "5ddb4360e2bb6e103b090c6dbbeaa053dc1c326745051215ece4b2b3e20c9b42",
+   "bytes": 13420
+  },
+  {
+   "path": "references\\绘图参考\\chart_selection.md",
+   "sha256": "d781d655832730ec376f89d27f9d7b4a5be1d4c17a379c846e4938034815058a",
+   "bytes": 11909
+  },
+  {
+   "path": "references\\绘图参考\\data_profiling.md",
+   "sha256": "ec2f87a5a09db0db00198b6b462b374c2640a57dfc41e2e884928c15145e27be",
+   "bytes": 8566
+  },
+  {
+   "path": "references\\绘图参考\\drawio_flowchart.md",
+   "sha256": "b52ef82f468ca3a43eb51a9f0bf55cbb1878797202fff4e09234a6ebcafb8f84",
+   "bytes": 6398
+  },
+  {
+   "path": "references\\绘图参考\\journal_specs.md",
+   "sha256": "a8e9654f55994d692d585e69fb3a68f5618ecf766d8ce0e95fdda6d12e786263",
+   "bytes": 7428
+  },
+  {
+   "path": "references\\绘图参考\\plot_recipes.md",
+   "sha256": "1e9b7fbf003de9c91bf27e432bc71317e0a0df60f91667cf3ec351b9515ed48f",
+   "bytes": 19389
+  },
+  {
+   "path": "references\\绘图参考\\publication_checklist.md",
+   "sha256": "7e8cf94b4b961793550f28963054638c3ad4c1437bcb6792aa07442b0525747d",
+   "bytes": 6002
+  },
+  {
+   "path": "references\\绘图参考\\README.md",
+   "sha256": "4e518b9f582db08d583e835153870390fa36179e86361273aeb74f835e153bf4",
+   "bytes": 2021
+  },
+  {
+   "path": "references\\绘图参考\\visual_review.md",
+   "sha256": "c4ca4a28a315e7de46f67b5972b3765b979f01fe30616c0681dd2595bed554a1",
+   "bytes": 7330
+  },
+  {
+   "path": "references\\绘图参考\\viz_pitfalls.md",
+   "sha256": "6811a3bfa377c9e1c2668c7f1f822d2cf59b6ee890cceae0a7dc54783c3a1b7e",
+   "bytes": 17163
+  },
+  {
+   "path": "scripts\\apply_publication_style.m",
+   "sha256": "c47099074e6d552e7403a4c168b5a703744fb1e126b6f44e4823f70717a180ff",
+   "bytes": 4042
+  },
+  {
+   "path": "scripts\\audit_publication_figure.m",
+   "sha256": "c46bf0259202a37b502c0a004cd08990de23dfbfb63b6b88d39a200db8c647dc",
+   "bytes": 3468
+  },
+  {
+   "path": "scripts\\check_env.py",
+   "sha256": "002b98e078b7ebef5d4a3dbef7c5dd0bbd6e58129d47dc212ec9d7819d5d464c",
+   "bytes": 2190
+  },
+  {
+   "path": "scripts\\check_matlab_env.m",
+   "sha256": "23d7b1cc9fe14e6cbfe2643e3ca31010dae2af7ff4e4cb0d104421b32d180343",
+   "bytes": 1308
+  },
+  {
+   "path": "scripts\\export_publication_figure.m",
+   "sha256": "c84f04a5a610984f8ae242c220c5f96bbb01fc8a5af2dbfa9bb9d65a2af77885",
+   "bytes": 1606
+  },
+  {
+   "path": "scripts\\figure_audit.py",
+   "sha256": "41484efe7e02bd2cbfd74d826aa601ce36041db2bb3b43b50f661a5d45169f42",
+   "bytes": 3603
+  },
+  {
+   "path": "scripts\\paper_check.py",
+   "sha256": "a6505310ed9223ca6401f17af3802486f24ff54c67543eff9ce275e042fa72ac",
+   "bytes": 8452
+  },
+  {
+   "path": "scripts\\plot_style.py",
+   "sha256": "c0398db465c6ef2b1d35b4077cf9bdb6db37cac330e5b3bb31dec7041827d46d",
+   "bytes": 30678
+  },
+  {
+   "path": "scripts\\profile_data.py",
+   "sha256": "2399a6eaab5f6e7d7616afa2a9128fe1386978ec8b77ddb183682606fe0f0fab",
+   "bytes": 3849
+  },
+  {
+   "path": "scripts\\repro_manifest.py",
+   "sha256": "335ada0894f1fee9837f2eb47a49b0fd7afcb756a8098ae656d8fb22d6243b1c",
+   "bytes": 3050
+  },
+  {
+   "path": "tools\\README.md",
+   "sha256": "87c5eb209e8d9ff5a5fd74740cf9327914ccaf8b0c0f4627be815a74fe38549c",
+   "bytes": 1429
+  },
+  {
+   "path": "tools\\update_star_history.py",
+   "sha256": "325c9b38eb7d1cccce3141a576dc09f2270f9b6b513a04d529df5e92739ddf85",
+   "bytes": 5602
+  },
+  {
+   "path": "tools\\docx\\LICENSE.txt",
+   "sha256": "79f6d8f5b427252fa3b1c11ecdbdb6bf610b944f7530b4de78f770f38741cfaa",
+   "bytes": 1467
+  },
+  {
+   "path": "tools\\docx\\SKILL.md",
+   "sha256": "f81aa71a841ed285dc155dd6f2df4c84e9b5e6ab9fd94eba8553329ce56f3a37",
+   "bytes": 6764
+  },
+  {
+   "path": "tools\\docx\\scripts\\accept_changes.py",
+   "sha256": "735646d6f2376ef7de45aa43c2fb32b019200f2d7ca4b8dcc9fb42a4a448f901",
+   "bytes": 4981
+  },
+  {
+   "path": "tools\\docx\\scripts\\check_env.py",
+   "sha256": "48acfdf1ae4aee6ba62e39a66acec560f096cbe395d193a89996c0187387f1d0",
+   "bytes": 1284
+  },
+  {
+   "path": "tools\\docx\\scripts\\comment.py",
+   "sha256": "ea4277bb2ed9054863e42834c5bb94bd9168317c128f6b0bb97c7ded2856ab43",
+   "bytes": 11669
+  },
+  {
+   "path": "tools\\docx\\scripts\\equations.py",
+   "sha256": "b822831e5c7c0df282e3baf1473460b6cad093660a12dd5292a007218b458cee",
+   "bytes": 51095
+  },
+  {
+   "path": "tools\\docx\\scripts\\inspect_template_format.py",
+   "sha256": "1ac06042f92e28d0c64cf28eed64478d63aac5d7bf8312686af764b358e1bddb",
+   "bytes": 7400
+  },
+  {
+   "path": "tools\\docx\\scripts\\paper_format.py",
+   "sha256": "9de9fac8bad450d9a82687a2e437cba29a64f231dc879dd35ec258c9bd2f5d91",
+   "bytes": 17958
+  },
+  {
+   "path": "tools\\docx\\scripts\\self_check.py",
+   "sha256": "939a45757fd0971cd3ae8755cd31c6a69c473d5e6d50d15ebdb71d31ec490988",
+   "bytes": 3890
+  },
+  {
+   "path": "tools\\docx\\scripts\\__init__.py",
+   "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+   "bytes": 1
+  },
+  {
+   "path": "tools\\docx\\scripts\\office\\pack.py",
+   "sha256": "1e0bec983bbd6620a3d607486488adcf558158f766d07f6ad6289c793397bdca",
+   "bytes": 5164
+  },
+  {
+   "path": "tools\\docx\\scripts\\office\\soffice.py",
+   "sha256": "0c1d10d9465feff5c0f34897d3fadffecf50b63e11d1cacbeff2384d8e0cc8c4",
+   "bytes": 5380
+  },
+  {
+   "path": "tools\\docx\\scripts\\office\\unpack.py",
+   "sha256": "5d308c297a2e0cdfc70d63520857150b886e4f5277348e0d3c2159c79bd2561e",
+   "bytes": 4225
+  },
+  {
+   "path": "tools\\docx\\scripts\\office\\validate.py",
+   "sha256": "c2333bef79104eccdcd0c2c2e2874c4a20cf321b56d255d3f22b42675923576b",
+   "bytes": 3902
+  },
+  {
+   "path": "tools\\docx\\scripts\\office\\_defusedxml_compat.py",
+   "sha256": "d67c358980450b70a438bd1859c0d5d598ec1daded7c289756f0663e2a2797d2",
+   "bytes": 1295
+  },
+  {
+   "path": "tools\\docx\\scripts\\office\\helpers\\merge_runs.py",
+   "sha256": "048ee7cc0d48e2dad3ca3b71093b29b3ea4d3895aebc85db05d6a677bbdf3647",
+   "bytes": 5740
+  },
+  {
+   "path": "tools\\docx\\scripts\\office\\helpers\\simplify_redlines.py",
+   "sha256": "f53b6b01af004b7a76fe44880e3c0ec225c213a2ff3531c0fb008b6c76948d5e",
+   "bytes": 5927
+  },
+  {
+   "path": "tools\\docx\\scripts\\office\\helpers\\__init__.py",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "bytes": 0
+  },
+  {
+   "path": "tools\\docx\\scripts\\office\\schemas\\ecma\\fouth-edition\\opc-contentTypes.xsd",
+   "sha256": "9e0b7209fc69ab11987900404540969976000c5ebe4d4f58c43dc3842886bf3a",
+   "bytes": 1963
+  },
+  {
+   "path": "tools\\docx\\scripts\\office\\schemas\\ecma\\fouth-edition\\opc-coreProperties.xsd",
+   "sha256": "451958454e8588dfc7cd945981ada142ca06ff3307937f5700df059c2b307fa8",
+   "bytes": 2515
+  },
+  {
+   "path": "tools\\docx\\scripts\\office\\schemas\\ecma\\fouth-edition\\opc-digSig.xsd",
+   "sha256": "6de111e11403f7cd49027400755bae0ea1cabef2815f09bd40a24f0017613b24",
+   "bytes": 2856
+  },
+  {
+   "path": "tools\\docx\\scripts\\office\\schemas\\ecma\\fouth-edition\\opc-relationships.xsd",
+   "sha256": "f565adfef5a502044abc3a9153e157edc25af78304d335994afb958874b15e26",
+   "bytes": 1344
+  },
+  {
+   "path": "tools\\docx\\scripts\\office\\schemas\\ISO-IEC29500-4_2016\\dml-chart.xsd",
+   "sha256": "41b93bd8857cc68b1e43be2806a872d736a9bdd6566900062d8fdb57d7bbb354",
+   "bytes": 74984
+  },
+  {
+   "path": "tools\\docx\\scripts\\office\\schemas\\ISO-IEC29500-4_2016\\dml-chartDrawing.xsd",
+   "sha256": "3fd0586f2637b98bb9886f0e0b67d89e1cc987c2d158cc7deb5f5b9890ced412",
+   "bytes": 6956
+  },
+  {
+   "path": "tools\\docx\\scripts\\office\\schemas\\ISO-IEC29500-4_2016\\dml-diagram.xsd",
+   "sha256": "29b254ee0d10414a8504b5a08149c7baec35a60d5ff607d6b3f492aa36815f40",
+   "bytes": 51302
+  },
+  {
+   "path": "tools\\docx\\scripts\\office\\schemas\\ISO-IEC29500-4_2016\\dml-lockedCanvas.xsd",
+   "sha256": "5cb76dabd8b97d1e9308a1700b90c20139be4d50792d21a7f09789f5cccd6026",
+   "bytes": 624
+  },
+  {
+   "path": "tools\\docx\\scripts\\office\\schemas\\ISO-IEC29500-4_2016\\dml-main.xsd",
+   "sha256": "5375417f0f5394b8dd1a7035b9679151f19a6b65df309dec10cfb4a420cb00e9",
+   "bytes": 152039
+  },
+  {
+   "path": "tools\\docx\\scripts\\office\\schemas\\ISO-IEC29500-4_2016\\dml-picture.xsd",
+   "sha256": "5d389d42befbebd91945d620242347caecd3367f9a3a7cf8d97949507ae1f53c",
+   "bytes": 1231
+  },
+  {
+   "path": "tools\\docx\\scripts\\office\\schemas\\ISO-IEC29500-4_2016\\dml-spreadsheetDrawing.xsd",
+   "sha256": "b4532b6d258832953fbb3ee4c711f4fe25d3faf46a10644b2505f17010d01e88",
+   "bytes": 8862
+  },
+  {
+   "path": "tools\\docx\\scripts\\office\\schemas\\ISO-IEC29500-4_2016\\dml-wordprocessingDrawing.xsd",
+   "sha256": "bdad416b096b61d37b71603b2c949484f9070c830bdaeba93bf35e15c8900614",
+   "bytes": 14795
+  },
+  {
+   "path": "tools\\docx\\scripts\\office\\schemas\\ISO-IEC29500-4_2016\\pml.xsd",
+   "sha256": "d173c3e5d61e42e2e3a97226c632fd2ab7cc481fc4e492365b87024ab546daff",
+   "bytes": 83612
+  },
+  {
+   "path": "tools\\docx\\scripts\\office\\schemas\\ISO-IEC29500-4_2016\\shared-additionalCharacteristics.xsd",
+   "sha256": "3c6709101c6aaa82888df5d8795c33f9e857196790eb320d9194e64be2b6bdd8",
+   "bytes": 1269
+  },
+  {
+   "path": "tools\\docx\\scripts\\office\\schemas\\ISO-IEC29500-4_2016\\shared-bibliography.xsd",
+   "sha256": "0b364451dc36a48dd6dae0f3b6ada05fd9b71e5208211f8ee5537d7e51a587e2",
+   "bytes": 7328
+  },
+  {
+   "path": "tools\\docx\\scripts\\office\\schemas\\ISO-IEC29500-4_2016\\shared-commonSimpleTypes.xsd",
+   "sha256": "e2abacbb9a55ce1365f8961bc1b1395bbc811e512b111000d8c333f98458dece",
+   "bytes": 6382
+  },
+  {
+   "path": "tools\\docx\\scripts\\office\\schemas\\ISO-IEC29500-4_2016\\shared-customXmlDataProperties.xsd",
+   "sha256": "0ef4bb354ff44b923564c4ddbdda5987919d220225129ec94614a618ceafc281",
+   "bytes": 1248
+  },
+  {
+   "path": "tools\\docx\\scripts\\office\\schemas\\ISO-IEC29500-4_2016\\shared-customXmlSchemaProperties.xsd",
+   "sha256": "0d103b99a4a8652f8871552a69d42d2a3760ac6a5e3ef02d979c4273257ff6a4",
+   "bytes": 880
+  },
+  {
+   "path": "tools\\docx\\scripts\\office\\schemas\\ISO-IEC29500-4_2016\\shared-documentPropertiesCustom.xsd",
+   "sha256": "9c085407751b9061c1f996f6c39ce58451be22a8d334f09175f0e89e42736285",
+   "bytes": 2608
+  },
+  {
+   "path": "tools\\docx\\scripts\\office\\schemas\\ISO-IEC29500-4_2016\\shared-documentPropertiesExtended.xsd",
+   "sha256": "bc92e36ccd233722d4c5869bec71ddc7b12e2df56059942cce5a39065cc9c368",
+   "bytes": 3507
+  },
+  {
+   "path": "tools\\docx\\scripts\\office\\schemas\\ISO-IEC29500-4_2016\\shared-documentPropertiesVariantTypes.xsd",
+   "sha256": "7b5b7413e2c895b1e148e82e292a117d53c7ec65b0696c992edca57b61b4a74b",
+   "bytes": 7507
+  },
+  {
+   "path": "tools\\docx\\scripts\\office\\schemas\\ISO-IEC29500-4_2016\\shared-math.xsd",
+   "sha256": "3213ef1631606250f5010b42cad7ef716f7c59426367798e33c374c0ec391d3a",
+   "bytes": 23313
+  },
+  {
+   "path": "tools\\docx\\scripts\\office\\schemas\\ISO-IEC29500-4_2016\\shared-relationshipReference.xsd",
+   "sha256": "12264f3c03d738311cd9237d212f1c07479e70f0cbe1ae725d29b36539aef637",
+   "bytes": 1367
+  },
+  {
+   "path": "tools\\docx\\scripts\\office\\schemas\\ISO-IEC29500-4_2016\\sml.xsd",
+   "sha256": "beffeed56945c22a77440122c8bdc426f3fcbe7f3b12ea0976c770d1f8d54578",
+   "bytes": 242277
+  },
+  {
+   "path": "tools\\docx\\scripts\\office\\schemas\\ISO-IEC29500-4_2016\\vml-main.xsd",
+   "sha256": "f5ee623b08b6a66935e5aced2f5d8ad0fc71bf9e8e833cd490150c0fa94b8763",
+   "bytes": 26148
+  },
+  {
+   "path": "tools\\docx\\scripts\\office\\schemas\\ISO-IEC29500-4_2016\\vml-officeDrawing.xsd",
+   "sha256": "585bedc1313b40888dcc544cb74cd939a105ee674f3b1d3aa1cc6d34f70ff155",
+   "bytes": 25279
+  },
+  {
+   "path": "tools\\docx\\scripts\\office\\schemas\\ISO-IEC29500-4_2016\\vml-presentationDrawing.xsd",
+   "sha256": "133c9f64a5c5d573b78d0a474122b22506d8eadb5e063f67cdbbb8fa2f161d0e",
+   "bytes": 535
+  },
+  {
+   "path": "tools\\docx\\scripts\\office\\schemas\\ISO-IEC29500-4_2016\\vml-spreadsheetDrawing.xsd",
+   "sha256": "6bdeb169c3717eb01108853bd9fc5a3750fb1fa5b82abbdd854d49855a40f519",
+   "bytes": 5712
+  },
+  {
+   "path": "tools\\docx\\scripts\\office\\schemas\\ISO-IEC29500-4_2016\\vml-wordprocessingDrawing.xsd",
+   "sha256": "475dcae1e7d1ea46232db6f8481040c15e53a52a3c256831d3df204212b0e831",
+   "bytes": 4010
+  },
+  {
+   "path": "tools\\docx\\scripts\\office\\schemas\\ISO-IEC29500-4_2016\\wml.xsd",
+   "sha256": "c2dd9f61f892deae6acd8d20771ea79b12018af25f3bf8d06639c8542d218cfd",
+   "bytes": 171367
+  },
+  {
+   "path": "tools\\docx\\scripts\\office\\schemas\\ISO-IEC29500-4_2016\\xml.xsd",
+   "sha256": "a539aa2fb154fa50e0f5cc97e6ad7cbc66f8ec3e3746f61ec6a8b0d5d15ecdf2",
+   "bytes": 4646
+  },
+  {
+   "path": "tools\\docx\\scripts\\office\\schemas\\mce\\mc.xsd",
+   "sha256": "3a37e461ecf5a8670fdec34029703401f8728ab9c96ec1739a6ae58d55212413",
+   "bytes": 3127
+  },
+  {
+   "path": "tools\\docx\\scripts\\office\\schemas\\microsoft\\wml-2010.xsd",
+   "sha256": "568b26ee156cb9549aa439ca2158965f77b7c1602b7e0316f40ac6cf586e35f2",
+   "bytes": 26549
+  },
+  {
+   "path": "tools\\docx\\scripts\\office\\schemas\\microsoft\\wml-2012.xsd",
+   "sha256": "0fa75578a000439a7988ba0c59fdc69f774bbd416cbacc14d07125b3f686cb74",
+   "bytes": 3745
+  },
+  {
+   "path": "tools\\docx\\scripts\\office\\schemas\\microsoft\\wml-2018.xsd",
+   "sha256": "be0ff793a22dd31384650c3a4da14c2fa8062751c2e97b0e5ee852bda13c60ad",
+   "bytes": 901
+  },
+  {
+   "path": "tools\\docx\\scripts\\office\\schemas\\microsoft\\wml-cex-2018.xsd",
+   "sha256": "fddc2b880cabb9005aebbc7e783e53c19fec1c03df7d0e2f2076a33a0fdfd081",
+   "bytes": 1778
+  },
+  {
+   "path": "tools\\docx\\scripts\\office\\schemas\\microsoft\\wml-cid-2016.xsd",
+   "sha256": "127ca209fa73d7cb708449cb355c871867948a96e4a74f7bf5811ef62d17991d",
+   "bytes": 1002
+  },
+  {
+   "path": "tools\\docx\\scripts\\office\\schemas\\microsoft\\wml-sdtdatahash-2020.xsd",
+   "sha256": "842e7163409c8d74f4d7088a8bc99500d80bc75332681a0980055b08f374a604",
+   "bytes": 600
+  },
+  {
+   "path": "tools\\docx\\scripts\\office\\schemas\\microsoft\\wml-symex-2015.xsd",
+   "sha256": "16f6f8072249f431370723c2cd8974672e0d9c897e00e97dd918079df934871b",
+   "bytes": 745
+  },
+  {
+   "path": "tools\\docx\\scripts\\office\\validators\\base.py",
+   "sha256": "5792e9d007ebd3819de585d8b28c115bd5daf83705d2b5c11633de7100e33b0a",
+   "bytes": 35240
+  },
+  {
+   "path": "tools\\docx\\scripts\\office\\validators\\docx.py",
+   "sha256": "8f20156ea3a05c8b9c7badc1a6136ba5d1b0ea466f5903e2d0ba4614fff3de6e",
+   "bytes": 16549
+  },
+  {
+   "path": "tools\\docx\\scripts\\office\\validators\\pptx.py",
+   "sha256": "f937961e62a5fa0d002b8dc51a4c4e2cd8fcd59fe65853fa54edaca3fe99eccc",
+   "bytes": 9824
+  },
+  {
+   "path": "tools\\docx\\scripts\\office\\validators\\redlining.py",
+   "sha256": "f4c33fdb9da0651d1d9aa76f0d5294cc9955869339ae131b2f75f3b2e366cb40",
+   "bytes": 8918
+  },
+  {
+   "path": "tools\\docx\\scripts\\office\\validators\\__init__.py",
+   "sha256": "83e0f035c5abea238d3f2c3968afbd511ed022b527b7c9cb60a9434cc34ff987",
+   "bytes": 336
+  },
+  {
+   "path": "tools\\docx\\scripts\\templates\\comments.xml",
+   "sha256": "a08ba83ee8790ac9e3dc61921f4988f19edd7e06ac09d6f1897a877c1581818d",
+   "bytes": 2603
+  },
+  {
+   "path": "tools\\docx\\scripts\\templates\\commentsExtended.xml",
+   "sha256": "544eeecfeceed4b468fff163cd9c366d33641c8b8ab691ce002576197846afe8",
+   "bytes": 2611
+  },
+  {
+   "path": "tools\\docx\\scripts\\templates\\commentsExtensible.xml",
+   "sha256": "bad10b3283e6ad6e7ef6d1ca5169683721ed690ee331282c65df04017e080631",
+   "bytes": 2707
+  },
+  {
+   "path": "tools\\docx\\scripts\\templates\\commentsIds.xml",
+   "sha256": "db20f9616e004ec42ef736e80c2384e45db0f8d1194d31dc8b37c7d6ecdd6420",
+   "bytes": 2619
+  },
+  {
+   "path": "tools\\docx\\scripts\\templates\\people.xml",
+   "sha256": "056f63aa1197fd8c9dda980c9f1b9ff016fd5fa4a462df8aec5f384f39d23e37",
+   "bytes": 115
+  },
+  {
+   "path": "tools\\drawio\\SKILL.md",
+   "sha256": "b5b6f5cb2f53b9ea9c9d33f6b6e14b2d45c1f6d14ed54d6f0991e20b32711600",
+   "bytes": 43255
+  },
+  {
+   "path": "tools\\drawio\\data\\lobe-icons.json",
+   "sha256": "e7c309bd5ebf4df948563d48469090d0868432549f168319534215f79b0077cc",
+   "bytes": 12919
+  },
+  {
+   "path": "tools\\drawio\\data\\SHAPE-INDEX-NOTICE.md",
+   "sha256": "dc6e070b9fd905c6a574614dd0c4403253ad8b7111e2f2f3892996b2729e26ab",
+   "bytes": 880
+  },
+  {
+   "path": "tools\\drawio\\data\\shape-index.json.gz",
+   "sha256": "f19d9f794775d91e196b0a8d1fce32d6dbbf9828f094bedc53e843c8131ee8ea",
+   "bytes": 436148
+  },
+  {
+   "path": "tools\\drawio\\references\\autolayout.md",
+   "sha256": "af5a08474b64d3e1d790090b2b9d7fd4775ed45ffb957d67cf61ee4a6eafb3d8",
+   "bytes": 19318
+  },
+  {
+   "path": "tools\\drawio\\references\\derasterize.md",
+   "sha256": "a4efd3152ba340299a92ae599d936fd07296d725a1a86efc79ed9a7b25754bb8",
+   "bytes": 2526
+  },
+  {
+   "path": "tools\\drawio\\references\\diagram-types.md",
+   "sha256": "958b6d0ab59b2731b6fb9d567a95d8c8cde596cddad18d5242304d916a78f7e1",
+   "bytes": 16691
+  },
+  {
+   "path": "tools\\drawio\\references\\live-infra.md",
+   "sha256": "87d92e8b8ae259a1433764f349ff8f8dd1f7991dba5d4c55198fb9fa1706580a",
+   "bytes": 3670
+  },
+  {
+   "path": "tools\\drawio\\references\\mermaid-authoring.md",
+   "sha256": "b44d45322be91ee3b32da2badaa8ff53e6951350185bb71f7fb8f48ac9120b96",
+   "bytes": 4978
+  },
+  {
+   "path": "tools\\drawio\\references\\pr-bot.md",
+   "sha256": "fcbf361e93b421780780983bd8d2a07ab29f77ecc6fc4ffa89939b59caec1224",
+   "bytes": 3522
+  },
+  {
+   "path": "tools\\drawio\\references\\shapes.md",
+   "sha256": "b696df00bb4d74afb93670adf0e58acd6e0eb5cf8145e40994851ec052a18c23",
+   "bytes": 7155
+  },
+  {
+   "path": "tools\\drawio\\references\\style-extraction.md",
+   "sha256": "9dfba198a0e0f610e2fdaecff29aa380984ba03c67d5a02c86b75106c95de2a0",
+   "bytes": 17575
+  },
+  {
+   "path": "tools\\drawio\\references\\style-presets.md",
+   "sha256": "51ed8394684b7700cad867a99da975878d0c1c662ee364b26d54a9c4ae8b99ad",
+   "bytes": 11079
+  },
+  {
+   "path": "tools\\drawio\\references\\toolbox.md",
+   "sha256": "2461ecd17c112b345fb1670fc092079a1a701bcd9e8ae89aed9c4ed627cd8d91",
+   "bytes": 9102
+  },
+  {
+   "path": "tools\\drawio\\references\\troubleshooting.md",
+   "sha256": "3c0f2319c2af4c16a824e2326b9c2219aeed9cd2507aa1742d52f9ddd74a24a5",
+   "bytes": 5280
+  },
+  {
+   "path": "tools\\drawio\\references\\tubemap.md",
+   "sha256": "654db7cc5f5c757a28e0b64060e3c78880fa11045944810150af1770cd8107c1",
+   "bytes": 3275
+  },
+  {
+   "path": "tools\\drawio\\references\\xml-authoring.md",
+   "sha256": "c78083e9ad74b6feac12efd4047c4163d97d10ddbbb27545e35a5b16b4de819d",
+   "bytes": 12635
+  },
+  {
+   "path": "tools\\drawio\\scripts\\aiicons.py",
+   "sha256": "1a7ab34a27dd2dd7982e9cc5f906caf94fca6a21120e5be3164ee204baa96720",
+   "bytes": 7983
+  },
+  {
+   "path": "tools\\drawio\\scripts\\autolayout.py",
+   "sha256": "d72e15eb0cfa356e9722c9824037d2fbd65840ee686324e87070d195d973a162",
+   "bytes": 18286
+  },
+  {
+   "path": "tools\\drawio\\scripts\\buildup.py",
+   "sha256": "e496e39605f51dd81d44964c623298376e1efba7c9c7132452c1e01dfddb8afc",
+   "bytes": 14380
+  },
+  {
+   "path": "tools\\drawio\\scripts\\c4.py",
+   "sha256": "82f349e1a5240984275f1fc9cfe21a91dd4124fbf42a61903439eaf90ceadd22",
+   "bytes": 6670
+  },
+  {
+   "path": "tools\\drawio\\scripts\\ciimports.py",
+   "sha256": "c9de9a7af0aa3ed6b2d3e4e1bfaa045444940bf31666fc7e0118ce962ae1ed86",
+   "bytes": 7776
+  },
+  {
+   "path": "tools\\drawio\\scripts\\composeimports.py",
+   "sha256": "ae9c96282daa3f35ddba65a443456034ca9e7e6920a3db5b646ed8fe0a17909d",
+   "bytes": 4738
+  },
+  {
+   "path": "tools\\drawio\\scripts\\compress.py",
+   "sha256": "464689570eccf3a8992531164f03933380624e00f3e97c421e74a49c1d3250a7",
+   "bytes": 10582
+  },
+  {
+   "path": "tools\\drawio\\scripts\\dockerimports.py",
+   "sha256": "86ee8d4eff549b536010545dfdbdf6780e3f43ba2b97eec7dbc254a8e057fd1a",
+   "bytes": 6337
+  },
+  {
+   "path": "tools\\drawio\\scripts\\drawio2mermaid.py",
+   "sha256": "c6bc00fd9d3e7f3f0534dddc4e519708559404e0c40c808ebc89312160b9e01c",
+   "bytes": 5965
+  },
+  {
+   "path": "tools\\drawio\\scripts\\drawio2pptx.py",
+   "sha256": "22be444d8ee4894f5a72f7f296a72c0f15085c9ae56fb72a9ff374c4861d0d45",
+   "bytes": 4519
+  },
+  {
+   "path": "tools\\drawio\\scripts\\drawiodiff.py",
+   "sha256": "304038e7a500455335401041007c1e816156134e68c79bb21da843fe8cc0aada",
+   "bytes": 7158
+  },
+  {
+   "path": "tools\\drawio\\scripts\\drawiohtml.py",
+   "sha256": "e7d69e9304d6d6011fdf84ec9d261bb9b64ab8cbb3e5858e82b6dc7f295f1ed5",
+   "bytes": 10486
+  },
+  {
+   "path": "tools\\drawio\\scripts\\edgeports.py",
+   "sha256": "429f1c8c0be958ef68418d38ddbf4af0e1da9d52f25015ecb599c74fa1b64f7a",
+   "bytes": 9285
+  },
+  {
+   "path": "tools\\drawio\\scripts\\encode_drawio_url.py",
+   "sha256": "47b77e4bc46226cc1a1cea29e93988877796d0a60706a2a38c7fd7910af3dfef",
+   "bytes": 2250
+  },
+  {
+   "path": "tools\\drawio\\scripts\\explain.py",
+   "sha256": "a804ae7094e5400f6c92b631dadae78e67ef4e2977bff8777e92058e1f22fb40",
+   "bytes": 6098
+  },
+  {
+   "path": "tools\\drawio\\scripts\\goimports.py",
+   "sha256": "de0f376117db385bdf502f8f498979f1c4b18107cceae9e16013d7f66319f555",
+   "bytes": 5557
+  },
+  {
+   "path": "tools\\drawio\\scripts\\heatmap.py",
+   "sha256": "91d0c98537bf31b14b8766f7ee98046a9142716df450a97b062092bdec532a73",
+   "bytes": 9176
+  },
+  {
+   "path": "tools\\drawio\\scripts\\jsimports.py",
+   "sha256": "edce79ff352558d9539ab96942c2762ea60c313e58bac14b647cf195e459dc50",
+   "bytes": 6314
+  },
+  {
+   "path": "tools\\drawio\\scripts\\k8simports.py",
+   "sha256": "3d2c32c908c78cf0f557ba2f3c00a3351b15052a3586d94c34cfe5251057782f",
+   "bytes": 9805
+  },
+  {
+   "path": "tools\\drawio\\scripts\\openapiimports.py",
+   "sha256": "2d29c8b205d862acd1201875dedbc91fc510266012bcb64f469902d7c365afdc",
+   "bytes": 6786
+  },
+  {
+   "path": "tools\\drawio\\scripts\\prdiff.py",
+   "sha256": "2e89c97b89b5dd47d7a15d7383396ae897364f141b201f1cd99ee09ab4c0fde8",
+   "bytes": 7995
+  },
+  {
+   "path": "tools\\drawio\\scripts\\pyclasses.py",
+   "sha256": "a7810d9dbc981bba82726e122d119fb0366e027a08e9cfb1dd03926b2aef3e02",
+   "bytes": 6221
+  },
+  {
+   "path": "tools\\drawio\\scripts\\pyimports.py",
+   "sha256": "39f8b2a8732bf3b2ec62a99b8d82c7652b40dd0287307af7482a7de6214df683",
+   "bytes": 6353
+  },
+  {
+   "path": "tools\\drawio\\scripts\\raster2drawio.py",
+   "sha256": "7a81fad51336f01fa5791c354a3467994faea396b76d018d99c377c0374fcdb5",
+   "bytes": 7467
+  },
+  {
+   "path": "tools\\drawio\\scripts\\relabel.py",
+   "sha256": "98db0ebe5928754719ccf7c1ebcf661d14e010aed3962cc38bae57c25810c414",
+   "bytes": 4247
+  },
+  {
+   "path": "tools\\drawio\\scripts\\repair_png.py",
+   "sha256": "1a453cb88231813dcb5631456b0c7431eb59acd21570c7e749c1cce89ae31c4c",
+   "bytes": 1097
+  },
+  {
+   "path": "tools\\drawio\\scripts\\restyle.py",
+   "sha256": "b12ff51e133de46aff66ca70c546d82d2eba77673b872786c3f02a31996c7140",
+   "bytes": 7243
+  },
+  {
+   "path": "tools\\drawio\\scripts\\runbook.py",
+   "sha256": "56059a1bb86ff76047dc962b2fa8276b01090bc0bfe6051b388a8adb9bc5dc9c",
+   "bytes": 10187
+  },
+  {
+   "path": "tools\\drawio\\scripts\\rustimports.py",
+   "sha256": "de08f1a9e29e0f71616e3ae9ad93e2b4c00a0ebc8213538c5a386b0ec9e1b52b",
+   "bytes": 7610
+  },
+  {
+   "path": "tools\\drawio\\scripts\\seqlayout.py",
+   "sha256": "527c522dfd1ccff1c252bb146f250710d0033385444ac3cc2a33ede11ee09fc4",
+   "bytes": 9917
+  },
+  {
+   "path": "tools\\drawio\\scripts\\shapesearch.py",
+   "sha256": "ac624fa2d532c1a72cc77ec0b2fd94a71e0baf4cd03ba339b60eb7a784e511b3",
+   "bytes": 5967
+  },
+  {
+   "path": "tools\\drawio\\scripts\\sqlerd.py",
+   "sha256": "f3896f9c17bb0933676de048cad3da6a3c17d853f0ef9dffb11d1e4ecacdff09",
+   "bytes": 6745
+  },
+  {
+   "path": "tools\\drawio\\scripts\\svgflow.py",
+   "sha256": "c1c5cfe5c7d172f689cb3dbdd887d83204aadfafdf0de01ae0c6fa357846e203",
+   "bytes": 3735
+  },
+  {
+   "path": "tools\\drawio\\scripts\\tfimports.py",
+   "sha256": "66636c6b73b41d485560a90e0b4a13a4b30d4ecb03910f66cd3519d40406b007",
+   "bytes": 11910
+  },
+  {
+   "path": "tools\\drawio\\scripts\\tfstate.py",
+   "sha256": "3398814a0355fe646e6fe7ac5f16f8566e386fe490b12b6958168c9577df764a",
+   "bytes": 5533
+  },
+  {
+   "path": "tools\\drawio\\scripts\\timelapse.py",
+   "sha256": "afbb8af378517ab464e3f326de7ba215c1cf7ab0b71ef0f5b58a37cba0878c32",
+   "bytes": 11188
+  },
+  {
+   "path": "tools\\drawio\\scripts\\tubemap.py",
+   "sha256": "0ca724b2e42dbc4132e3c880a446d7b097ca415f3e0ecb2edb58a0501599c0b5",
+   "bytes": 6895
+  },
+  {
+   "path": "tools\\drawio\\scripts\\validate.py",
+   "sha256": "92afc13212c913b9e881460f94943202a179eb304856d6247187b309b077b52e",
+   "bytes": 13337
+  },
+  {
+   "path": "tools\\drawio\\styles\\schema.json",
+   "sha256": "4886d76481285d584eaa7963053c1ec6786eb335b4f75e1093b66788dce148c0",
+   "bytes": 5362
+  },
+  {
+   "path": "tools\\drawio\\styles\\built-in\\colorblind-safe.json",
+   "sha256": "3b836988e6533c07bf0e6676cc35731e750f0fa659ab25e80bfef7087436f3eb",
+   "bytes": 1472
+  },
+  {
+   "path": "tools\\drawio\\styles\\built-in\\corporate.json",
+   "sha256": "0cb0ba05b44e5938ce775bb917b6ffaa3a0501ceedbd610975cc6e909fe5e60b",
+   "bytes": 1471
+  },
+  {
+   "path": "tools\\drawio\\styles\\built-in\\dark.json",
+   "sha256": "2a78d4da3b6bc747da7943597bb1d58e9ff12f5188192ecc09589570d6873fae",
+   "bytes": 1546
+  },
+  {
+   "path": "tools\\drawio\\styles\\built-in\\default.json",
+   "sha256": "5340c1f80ab983f412e895d58d5dffb4949c246acc516702fd565675fec140e1",
+   "bytes": 1454
+  },
+  {
+   "path": "tools\\drawio\\styles\\built-in\\handdrawn.json",
+   "sha256": "92a1fdca1bbb95e5239fca62b2da81d4035936a11ca690e026419a5c2508e541",
+   "bytes": 1474
+  },
+  {
+   "path": "tools\\latex\\SKILL.md",
+   "sha256": "0b7486727a8593e5f0b8f3bf94078a4ec17c32fac23b62962463271825deabcd",
+   "bytes": 8872
+  },
+  {
+   "path": "tools\\latex\\assets\\templates\\cumcm\\main.tex",
+   "sha256": "a0a673f3d093b23fef2786e1b0dbecffeb36c6a252640d51deb05a7aca6c9d09",
+   "bytes": 2582
+  },
+  {
+   "path": "tools\\latex\\assets\\templates\\cumcm\\references.bib",
+   "sha256": "c85fa9f8c7cdb3b0c8c2f394bebd7624f6ff5abdd6bac5b4f43b58e67ee7c222",
+   "bytes": 66
+  },
+  {
+   "path": "tools\\latex\\assets\\templates\\mcm-icm\\main.tex",
+   "sha256": "de74c3cdd704c9a8c1da68cca4dcee9a79a74900a405d35100960f329027032e",
+   "bytes": 848
+  },
+  {
+   "path": "tools\\latex\\assets\\templates\\mcm-icm\\references.bib",
+   "sha256": "c0401239e1bf74dca7bcb854be54695d6b2a06ddf065bef33ee4c0329ecb845a",
+   "bytes": 51
+  },
+  {
+   "path": "tools\\latex\\scripts\\latex_paper.py",
+   "sha256": "b8b0f4bf9e7901ce9601e3bb26c61fb82dffd71cac0748b2b893899875e0edbd",
+   "bytes": 65793
+  },
+  {
+   "path": "tools\\paper_search\\SKILL.md",
+   "sha256": "3cf7a34e9762eedf781a7ff856a60f91c01e825cc2f016b78f85aa3c7770c91a",
+   "bytes": 1921
+  },
+  {
+   "path": "tools\\paper_search\\scripts\\anysearch_academic.py",
+   "sha256": "736b35d909fa69252a4e70e7431f20cbced23fed5c4ffdb8f8c1c15a531dbc9e",
+   "bytes": 10562
+  },
+  {
+   "path": "tools\\paper_search\\scripts\\hybrid_scholar.py",
+   "sha256": "a07e7638f8a27d6103fa1a6f1fd95fcbc36cf620556087f562e07476b9c8a0e0",
+   "bytes": 23245
+  },
+  {
+   "path": "tools\\paper_search\\scripts\\openalex_scholar.py",
+   "sha256": "5070c2e52a6ba8554f20e1a6f11c95208b6b6371e8959ff93a3df1f92905954a",
+   "bytes": 14683
+  },
+  {
+   "path": "tools\\pdf\\forms.md",
+   "sha256": "9530b3f57034792e0242a3abfe8b3c296466329551916f2ff6c5a70db78f7e44",
+   "bytes": 11854
+  },
+  {
+   "path": "tools\\pdf\\LICENSE.txt",
+   "sha256": "79f6d8f5b427252fa3b1c11ecdbdb6bf610b944f7530b4de78f770f38741cfaa",
+   "bytes": 1467
+  },
+  {
+   "path": "tools\\pdf\\reference.md",
+   "sha256": "03a5f964f8abecbbe156f363356e927e864d7ee964f1012c84ee1bfc8acbeb95",
+   "bytes": 16692
+  },
+  {
+   "path": "tools\\pdf\\SKILL.md",
+   "sha256": "9f78b8359fbd4943ad260a7a1e436e5a96503406d6c34e99f69223d647d85b9c",
+   "bytes": 8072
+  },
+  {
+   "path": "tools\\pdf\\scripts\\check_bounding_boxes.py",
+   "sha256": "0ced522402dd7b3c82a0be9518cf4e485fa9cc0467d7beab6ddb04cb36fcc3e1",
+   "bytes": 2774
+  },
+  {
+   "path": "tools\\pdf\\scripts\\check_fillable_fields.py",
+   "sha256": "1fe10b9980a5493c9bbec8c20630c603eaa475b45403751c08f26738736647b8",
+   "bytes": 268
+  },
+  {
+   "path": "tools\\pdf\\scripts\\convert_pdf_to_images.py",
+   "sha256": "7f58e292a67e18a8ff000d30bad2469389546731f7e8a698cc1d0aed001ea15d",
+   "bytes": 1008
+  },
+  {
+   "path": "tools\\pdf\\scripts\\create_validation_image.py",
+   "sha256": "8fa9fd7962c9f940045b81cf6b991e7c1057c1838e3f9cc6d305007a222ffebf",
+   "bytes": 1258
+  },
+  {
+   "path": "tools\\pdf\\scripts\\extract_form_field_info.py",
+   "sha256": "bb235b36f497bbb1c7c6821cecf527bbba7213520de11219da99f7b13a38c109",
+   "bytes": 4300
+  },
+  {
+   "path": "tools\\pdf\\scripts\\extract_form_structure.py",
+   "sha256": "6814e3fe8f78c2b16d766c132b5a727ff7a31b71d76a7d46bd6e40fe50bc97c5",
+   "bytes": 3945
+  },
+  {
+   "path": "tools\\pdf\\scripts\\fill_fillable_fields.py",
+   "sha256": "d140872c2e92e41b1e05370ae8d270c5b7f5ebdf55d9905f03bc974a9c708ff5",
+   "bytes": 3819
+  },
+  {
+   "path": "tools\\pdf\\scripts\\fill_pdf_form_with_annotations.py",
+   "sha256": "8a56e063a49ed53c0b0e1d312ecf8023af76816ed139486ec3b539873de202fd",
+   "bytes": 3235
+  },
+  {
+   "path": "tools\\xlsx\\LICENSE.txt",
+   "sha256": "79f6d8f5b427252fa3b1c11ecdbdb6bf610b944f7530b4de78f770f38741cfaa",
+   "bytes": 1467
+  },
+  {
+   "path": "tools\\xlsx\\SKILL.md",
+   "sha256": "582e00a939b2d3cadf41a2da4bdfeefcfb8d4a02d8c7b6faab3f5b6a5476e85a",
+   "bytes": 2325
+  },
+  {
+   "path": "tools\\xlsx\\scripts\\read_rows.py",
+   "sha256": "ab15b3bd0d0c9b368af82c6e7836b1073167c965e382cf2d1fa654aa1b077e17",
+   "bytes": 896
+  },
+  {
+   "path": "tools\\xlsx\\scripts\\recalc.py",
+   "sha256": "0d7896cf9a74717dbc0bc4182d807ac7eaeebb107b8cfd9970d65b7a14331b1c",
+   "bytes": 5034
+  }
+ ]
+}

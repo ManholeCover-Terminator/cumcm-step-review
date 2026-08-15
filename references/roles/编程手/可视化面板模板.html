@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>数学建模 — 图表可视化面板</title>
+<style>
+  /* ===== Reset & Base ===== */
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html { font-size: 14px; }
+  body {
+    font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+    background: #F8FAFC;
+    color: #1E293B;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ===== Left Sidebar ===== */
+  .sidebar {
+    width: 240px;
+    min-width: 240px;
+    background: #0F4D92;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    user-select: none;
+  }
+  .sidebar-header {
+    padding: 20px 20px 16px;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+  }
+  .sidebar-header h1 {
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+  .sidebar-header .sub {
+    font-size: 11px;
+    color: rgba(255,255,255,0.55);
+    margin-top: 4px;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+  }
+
+  /* figure counter badge */
+  .fig-counter {
+    display: inline-block;
+    font-size: 11px;
+    color: rgba(255,255,255,0.5);
+    padding: 0 20px 8px;
+    margin-top: 8px;
+  }
+
+  .nav-list {
+    list-style: none;
+    padding: 4px 0;
+    overflow-y: auto;
+    flex: 1;
+  }
+  .nav-list::-webkit-scrollbar { width: 3px; }
+  .nav-list::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 2px; }
+  .nav-item {
+    position: relative;
+    padding: 11px 20px 11px 20px;
+    cursor: pointer;
+    font-size: 13px;
+    color: rgba(255,255,255,0.7);
+    border-left: 3px solid transparent;
+    transition: all 0.15s ease;
+  }
+  .nav-item:hover {
+    background: rgba(255,255,255,0.06);
+    color: #fff;
+  }
+  .nav-item.active {
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+    border-left-color: #FFD700;
+  }
+  .nav-item .fig-num {
+    display: inline-block;
+    font-size: 11px;
+    color: rgba(255,255,255,0.35);
+    margin-right: 8px;
+    font-variant-numeric: tabular-nums;
+    min-width: 18px;
+  }
+  .nav-item.active .fig-num { color: #FFD700; }
+
+  /* ===== Main Content ===== */
+  .main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    min-width: 0;
+  }
+
+  /* ===== Toolbar ===== */
+  .toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    height: 52px;
+    background: #fff;
+    border-bottom: 1px solid #E2E8F0;
+    flex-shrink: 0;
+  }
+  .toolbar-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+  }
+  .toolbar-fig-label {
+    font-size: 11px;
+    font-weight: 500;
+    color: #767676;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .toolbar-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0F4D92;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .toolbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+  }
+
+  /* zoom indicator */
+  .zoom-indicator {
+    font-size: 12px;
+    color: #767676;
+    min-width: 44px;
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .toolbar-actions button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 12px;
+    height: 32px;
+    font-size: 12px;
+    border: 1px solid #E2E8F0;
+    background: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    font-family: inherit;
+    color: #4D4D4D;
+    gap: 4px;
+    white-space: nowrap;
+  }
+  .toolbar-actions button:hover {
+    background: #F1F5F9;
+    border-color: #CFCECE;
+  }
+  .toolbar-actions button:active {
+    background: #E2E8F0;
+  }
+  .toolbar-actions .btn-primary {
+    background: #0F4D92;
+    color: #fff;
+    border-color: #0F4D92;
+  }
+  .toolbar-actions .btn-primary:hover {
+    background: #143E72;
+    border-color: #143E72;
+  }
+  .toolbar-actions .btn-primary:active {
+    background: #0C3460;
+  }
+  .toolbar-divider {
+    width: 1px;
+    height: 20px;
+    background: #E2E8F0;
+    margin: 0 4px;
+  }
+
+  /* ===== Figure View Area ===== */
+  .figure-view {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    overflow: auto;
+    background: #F1F5F9;
+    position: relative;
+  }
+  .figure-page {
+    display: none;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .figure-page.active { display: flex; }
+
+  .figure-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .figure-svg {
+    width: 100%;
+    height: auto;
+    max-height: calc(100vh - 180px);
+    border: 1px solid #E2E8F0;
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    transition: transform 0.2s ease;
+    transform-origin: center center;
+  }
+  .figure-svg[style*="scale"] {
+    transform-origin: top left;
+  }
+
+  /* figure caption / metadata */
+  .figure-meta {
+    width: 100%;
+    max-width: 1100px;
+    margin-top: 12px;
+    padding: 10px 14px;
+    background: #fff;
+    border: 1px solid #E2E8F0;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #4D4D4D;
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  }
+  .figure-meta .fig-caption-label {
+    font-weight: 600;
+    color: #0F4D92;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+  .figure-meta .fig-caption-text {
+    color: #4D4D4D;
+    flex: 1;
+  }
+
+  /* ===== Placeholder ===== */
+  .placeholder {
+    color: #94A3B8;
+    font-size: 15px;
+    letter-spacing: 0.3px;
+  }
+  .placeholder-icon {
+    font-size: 40px;
+    margin-bottom: 12px;
+    opacity: 0.3;
+  }
+
+  /* ===== Loading overlay ===== */
+  .loading-overlay {
+    display: none;
+    position: absolute;
+    inset: 0;
+    background: rgba(241,245,249,0.7);
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+  }
+  .loading-overlay.show { display: flex; }
+  .loading-spinner {
+    width: 28px;
+    height: 28px;
+    border: 2px solid #E2E8F0;
+    border-top-color: #0F4D92;
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* ===== Keyboard shortcut hint ===== */
+  .kbd-hint {
+    position: fixed;
+    bottom: 16px;
+    right: 24px;
+    font-size: 11px;
+    color: #94A3B8;
+    letter-spacing: 0.3px;
+    pointer-events: none;
+    opacity: 0.6;
+  }
+  .kbd-hint kbd {
+    display: inline-block;
+    padding: 1px 5px;
+    font-size: 10px;
+    font-family: inherit;
+    background: #E2E8F0;
+    border-radius: 3px;
+    border: 1px solid #CFCECE;
+    margin: 0 1px;
+  }
+
+  /* ===== Fullscreen ===== */
+  .figure-view:fullscreen {
+    padding: 32px;
+    background: #F1F5F9;
+  }
+  .figure-view:fullscreen .figure-svg {
+    max-height: calc(100vh - 140px);
+  }
+  .figure-view:fullscreen .figure-meta {
+    display: flex;
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== Sidebar ===== -->
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <h1>可视化面板</h1>
+    <div class="sub">Visualization Panel</div>
+  </div>
+  <div class="fig-counter" id="figCounter">1 / 3</div>
+  <ul class="nav-list" id="navList">
+    <!-- 手动修改以下 li 列表，data-fig 对应 SVG 文件名前缀，data-desc 对应图表描述 -->
+    <li class="nav-item active" data-fig="figure1" data-desc="各模型在训练集和测试集上的性能指标对比">
+      <span class="fig-num">Fig.1</span> 模型对比
+    </li>
+    <li class="nav-item" data-fig="figure2" data-desc="关键变量随时间变化的趋势及置信区间">
+      <span class="fig-num">Fig.2</span> 趋势分析
+    </li>
+    <li class="nav-item" data-fig="figure3" data-desc="最终结果的统计分布与误差分析">
+      <span class="fig-num">Fig.3</span> 结果展示
+    </li>
+    <!-- 按需增减以上条目 -->
+  </ul>
+</nav>
+
+<!-- ===== Main ===== -->
+<main class="main-content">
+  <div class="toolbar">
+    <div class="toolbar-left">
+      <span class="toolbar-fig-label">Figure</span>
+      <span class="toolbar-title" id="figTitle">模型对比</span>
+    </div>
+    <div class="toolbar-actions">
+      <button onclick="zoomOut()" title="缩小 (Ctrl+-)">−</button>
+      <span class="zoom-indicator" id="zoomLevel">100%</span>
+      <button onclick="zoomIn()" title="放大 (Ctrl+=)">+</button>
+      <button onclick="zoomReset()" title="重置 (Ctrl+0)">↺</button>
+      <div class="toolbar-divider"></div>
+      <button class="btn-primary" onclick="exportSVG()" title="导出 SVG (Ctrl+E)">导出 SVG</button>
+      <button onclick="exportPNG()" title="导出 PNG">导出 PNG</button>
+      <div class="toolbar-divider"></div>
+      <button onclick="toggleFullscreen()" title="全屏 (F11)">⛶</button>
+    </div>
+  </div>
+
+  <div class="figure-view" id="figureView">
+    <!-- loading overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+      <div class="loading-spinner"></div>
+    </div>
+
+    <!-- 手动修改以下页面，id="page-{文件名前缀}"，data="figures/{文件名前缀}.svg" -->
+    <div class="figure-page active" id="page-figure1">
+      <div class="figure-container">
+        <object data="figure1.svg" type="image/svg+xml" class="figure-svg" id="svg-figure1"></object>
+        <div class="figure-meta">
+          <span class="fig-caption-label">Figure 1.</span>
+          <span class="fig-caption-text" id="desc-figure1">各模型在训练集和测试集上的性能指标对比</span>
+        </div>
+      </div>
+    </div>
+    <div class="figure-page" id="page-figure2">
+      <div class="figure-container">
+        <object data="figure2.svg" type="image/svg+xml" class="figure-svg" id="svg-figure2"></object>
+        <div class="figure-meta">
+          <span class="fig-caption-label">Figure 2.</span>
+          <span class="fig-caption-text" id="desc-figure2">关键变量随时间变化的趋势及置信区间</span>
+        </div>
+      </div>
+    </div>
+    <div class="figure-page" id="page-figure3">
+      <div class="figure-container">
+        <object data="figure3.svg" type="image/svg+xml" class="figure-svg" id="svg-figure3"></object>
+        <div class="figure-meta">
+          <span class="fig-caption-label">Figure 3.</span>
+          <span class="fig-caption-text" id="desc-figure3">最终结果的统计分布与误差分析</span>
+        </div>
+      </div>
+    </div>
+    <!-- 按需增减以上页面 -->
+  </div>
+</main>
+
+<div class="kbd-hint">
+  <kbd>Ctrl</kbd>+<kbd>+</kbd>/<kbd>-</kbd> 缩放 &nbsp;|&nbsp; <kbd>Ctrl</kbd>+<kbd>E</kbd> 导出
+</div>
+
+<script>
+  let currentFig = 'figure1';
+  let zoomLevel = 1;
+  let zoomCenterX = 0.5;
+  let zoomCenterY = 0.5;
+
+  const navItems = document.querySelectorAll('.nav-item');
+  const pages = {};
+  document.querySelectorAll('.figure-page').forEach(p => {
+    pages[p.id.replace('page-', '')] = p;
+  });
+
+  // ===== Navigation =====
+  navItems.forEach(item => {
+    item.addEventListener('click', () => {
+      navItems.forEach(n => n.classList.remove('active'));
+      item.classList.add('active');
+      const fig = item.dataset.fig;
+      Object.values(pages).forEach(p => p.classList.remove('active'));
+      if (pages[fig]) pages[fig].classList.add('active');
+      document.getElementById('figTitle').textContent = item.textContent.replace(/^Fig\.\d+\s*/, '');
+      currentFig = fig;
+      zoomReset();
+
+      // update counter
+      const total = navItems.length;
+      const idx = Array.from(navItems).indexOf(item) + 1;
+      document.getElementById('figCounter').textContent = idx + ' / ' + total;
+    });
+  });
+
+  // ===== SVG Loading =====
+  document.querySelectorAll('.figure-page object').forEach(obj => {
+    obj.addEventListener('load', () => {
+      const page = obj.closest('.figure-page');
+      if (page) {
+        page.style.opacity = '1';
+      }
+    });
+    // initial hidden
+    const page = obj.closest('.figure-page');
+    if (page) page.style.opacity = '0';
+  });
+
+  // ===== Zoom: get active SVG element =====
+  function getActiveSVGElement() {
+    if (!currentFig) return null;
+    const obj = document.getElementById('svg-' + currentFig);
+    if (!obj) return null;
+    try {
+      const svgDoc = obj.contentDocument;
+      if (!svgDoc) return null;
+      return svgDoc.querySelector('svg');
+    } catch(e) {
+      return null;
+    }
+  }
+
+  function zoomIn() {
+    zoomLevel = Math.min(zoomLevel * 1.25, 5);
+    applyZoom();
+  }
+  function zoomOut() {
+    zoomLevel = Math.max(zoomLevel / 1.25, 0.25);
+    applyZoom();
+  }
+  function zoomReset() {
+    zoomLevel = 1;
+    applyZoom();
+  }
+  function applyZoom() {
+    const svg = getActiveSVGElement();
+    if (svg) {
+      svg.style.transform = 'scale(' + zoomLevel + ')';
+    }
+    document.getElementById('zoomLevel').textContent = Math.round(zoomLevel * 100) + '%';
+  }
+
+  // ===== Keyboard Shortcuts =====
+  document.addEventListener('keydown', (e) => {
+    // Ctrl + / Ctrl -  zoom
+    if (e.ctrlKey && (e.key === '=' || e.key === '+')) {
+      e.preventDefault();
+      zoomIn();
+    }
+    if (e.ctrlKey && e.key === '-') {
+      e.preventDefault();
+      zoomOut();
+    }
+    if (e.ctrlKey && e.key === '0') {
+      e.preventDefault();
+      zoomReset();
+    }
+    // Ctrl + E export
+    if (e.ctrlKey && (e.key === 'e' || e.key === 'E')) {
+      e.preventDefault();
+      exportSVG();
+    }
+    // Arrow keys navigate
+    if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+      e.preventDefault();
+      const active = document.querySelector('.nav-item.active');
+      const prev = active ? active.previousElementSibling : null;
+      if (prev && prev.classList.contains('nav-item')) prev.click();
+    }
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+      e.preventDefault();
+      const active = document.querySelector('.nav-item.active');
+      const next = active ? active.nextElementSibling : null;
+      if (next && next.classList.contains('nav-item')) next.click();
+    }
+    // F11 fullscreen
+    if (e.key === 'F11') {
+      e.preventDefault();
+      toggleFullscreen();
+    }
+  });
+
+  // ===== Fullscreen =====
+  function toggleFullscreen() {
+    const el = document.getElementById('figureView');
+    if (!document.fullscreenElement) {
+      el.requestFullscreen().catch(() => {});
+    } else {
+      document.exitFullscreen().catch(() => {});
+    }
+  }
+
+  // ===== Export SVG =====
+  function exportSVG() {
+    if (!currentFig) { alert('请先选择一张图表'); return; }
+    const obj = document.getElementById('svg-' + currentFig);
+    if (!obj) return;
+    try {
+      const svgDoc = obj.contentDocument;
+      if (!svgDoc) { alert('SVG 尚未加载完成，请稍后再试'); return; }
+      const svgEl = svgDoc.querySelector('svg');
+      if (!svgEl) return;
+
+      // ensure namespace
+      svgEl.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+      const serializer = new XMLSerializer();
+      const svgStr = '<?xml version="1.0" encoding="UTF-8"?>\n' + serializer.serializeToString(svgEl);
+      const blob = new Blob([svgStr], { type: 'image/svg+xml;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = currentFig + '.svg';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    } catch(e) {
+      alert('导出失败: ' + e.message);
+    }
+  }
+
+  // ===== Export PNG =====
+  function exportPNG() {
+    if (!currentFig) { alert('请先选择一张图表'); return; }
+    const obj = document.getElementById('svg-' + currentFig);
+    if (!obj) return;
+    try {
+      const svgDoc = obj.contentDocument;
+      if (!svgDoc) { alert('SVG 尚未加载完成，请稍后再试'); return; }
+      const svgEl = svgDoc.querySelector('svg');
+      if (!svgEl) return;
+
+      const svgData = new XMLSerializer().serializeToString(svgEl);
+      const canvas = document.createElement('canvas');
+      const rect = svgEl.getBoundingClientRect();
+      const dpr = 2; // high DPI output
+      // try to get actual SVG dimensions
+      let width = parseInt(svgEl.getAttribute('width')) || rect.width || 800;
+      let height = parseInt(svgEl.getAttribute('height')) || rect.height || 600;
+      if (isNaN(width) || width < 100) width = 800;
+      if (isNaN(height) || height < 100) height = 600;
+
+      canvas.width = width * dpr;
+      canvas.height = height * dpr;
+      const ctx = canvas.getContext('2d');
+      ctx.scale(dpr, dpr);
+
+      const img = new Image();
+      const blob = new Blob([svgData], { type: 'image/svg+xml;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+
+      img.onload = () => {
+        ctx.fillStyle = '#fff';
+        ctx.fillRect(0, 0, width, height);
+        ctx.drawImage(img, 0, 0, width, height);
+        URL.revokeObjectURL(url);
+
+        canvas.toBlob((pngBlob) => {
+          if (!pngBlob) { alert('PNG 生成失败'); return; }
+          const pngUrl = URL.createObjectURL(pngBlob);
+          const a = document.createElement('a');
+          a.href = pngUrl;
+          a.download = currentFig + '.png';
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+          URL.revokeObjectURL(pngUrl);
+        }, 'image/png');
+      };
+      img.onerror = () => { alert('PNG 渲染失败'); URL.revokeObjectURL(url); };
+      img.src = url;
+    } catch(e) {
+      alert('导出失败: ' + e.message);
+    }
+  }
+
+  // ===== Wheel zoom =====
+  document.getElementById('figureView').addEventListener('wheel', (e) => {
+    if (e.ctrlKey || e.metaKey) {
+      e.preventDefault();
+      if (e.deltaY < 0) zoomIn();
+      else zoomOut();
+    }
+  }, { passive: false });
+</script>
+
+</body>
+</html>
