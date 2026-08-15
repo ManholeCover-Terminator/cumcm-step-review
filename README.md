@@ -50,6 +50,19 @@ git clone https://github.com/<你的用户名>/cumcm-step-review.git ~/.codex/sk
 ## 许可证与致谢
 
 - 本技能主体：MIT License（见 [LICENSE](LICENSE)）。
-- 内置 `tools/drawio/`：drawio-skill v2.1.0，MIT License，Copyright (c) Agents365-ai。
-- `references/绘图参考/` 知识库吸收自 scipilot-figure-skill，MIT License，Copyright (c) 2026 Haojae。
-- 摘要语料来自全国大学生数学建模竞赛历年公开优秀论文（公开资料，仅供学习研究）。
+
+## 学习与来源声明
+
+本技能在开发过程中**学习并融合了以下既有技能与公开资料**，谨此声明并致谢；完整明细与落位见 [CREDITS.md](CREDITS.md)。
+
+| 来源 | 融入内容 | 说明 |
+| --- | --- | --- |
+| math-modeling | 基础建模流程、建模手/编程手/论文手分工、工具链与算法库骨架 | 作者自建技能 |
+| math-modeling-review | 分步审核工作流与“分析→审核→代码→写稿→再审→冻结”协议 | 作者自建技能 |
+| math-contest-assistant | 论文各部分的组织与写作经验 | 作者自建技能 |
+| math-modeling-paper-review | 论文审阅与写法经验 | 作者自建技能 |
+| cumcm-abstract-writing-skill | 摘要写作方法论与摘要语料分析（`references/摘要写作/`） | 开源技能（GitHub: jjh666888/cumcm-abstract-writing-skill） |
+| drawio-skill v2.1.0 | `tools/drawio/` 非数据图工具链 | MIT，Agents365-ai |
+| scipilot-figure-skill | `references/绘图参考/` 科研绘图知识库 | MIT，Haojae |
+| mathmodel-figure-templates | `assets/figure-templates/` 科研绘图模板 | 内置自包含 |
+| 历届国赛优秀论文（公开资料） | 93 篇优秀摘要语料、写作指南、语料分析报告 | 公开资料，仅供学习研究 |
